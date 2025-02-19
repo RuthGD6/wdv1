@@ -1,0 +1,46 @@
+a {
+  font-size: 12px;
+}
+.font--md {
+  font-size: 16px;
+}
+.font--lg {
+  font-size: 20px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header {
+  background-color: blue;
+  padding: 12px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.header__right-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header__logo {
+  font-size: 36px;
+}
+.header__links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid white;
+}
+
+/*# sourceMappingURL=main.css.map */
