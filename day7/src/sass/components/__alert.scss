@@ -19,29 +19,30 @@ $alert-colors: (
     border: #ffe69c,
     color: #664d03,
     background-color: #fff3cd
+  ),
+  danger: (
+    border: #ff9c9c,
+    color: #660303,
+    background-color: #ffcdcd
   )
 );
 
-.alert {
+@mixin alert-colors($variant) {
+  background-color: map.get($alert-colors, $variant, background-color);
+  color: map.get($alert-colors, $variant, color);
+  border: 1px solid map.get($alert-colors, $variant, border);
+}
+
+$base-class: alert;
+
+.#{$base-class} {
   padding: 16px;
   font-size: 12px;
   border-radius: 4px;
 
-  &--primary {
-    background-color: map.get($alert-colors, primary, background-color);
-    color: map.get($alert-colors, primary, color);
-    border: 1px solid map.get($alert-colors, primary, border);
-  }
-
-  &--success {
-    background-color: map.get($alert-colors, success, background-color);
-    color: map.get($alert-colors, success, color);
-    border: 1px solid map.get($alert-colors, success, border);
-  }
-
-  &--warning {
-    background-color: map.get($alert-colors, warning, background-color);
-    color: map.get($alert-colors, warning, color);
-    border: 1px solid map.get($alert-colors, warning, border);
+  @each $variant, $values in $alert-colors {
+    &--#{$variant} {
+      @include alert-colors($variant);
+    }
   }
 }
