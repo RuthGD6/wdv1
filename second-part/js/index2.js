@@ -31,4 +31,5 @@ a.setAttribute('href', 'https://www.google.com');
 
 
 const imgElement = document.getElementsByTagName('img')[0];
-console.log( imgElement.getAttribute('src'));
+// console.log( imgElement.removeAttribute('src'));
+imgElement.setAttribute('alt', 'this is an image');
