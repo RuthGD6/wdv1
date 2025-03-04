@@ -7,16 +7,28 @@
 
 // console.log( title);
 
-
 // const paragraphs = document.getElementsByTagName('p');
 // console.log(paragraphs);
-
 
 // const list = document.getElementsByClassName('list-item');
 // list[0].innerHTML = '<li><strong> ITEM 1</strong></li>';
 
-const input = document.getElementById('input');
+const input = document.getElementById("input");
 
-input.addEventListener('keyup', function(event){
+input.addEventListener("keydown", function (event) {
+  if (event.key === "y") {
+    console.log("You pressed Y!");
+  } else {
     console.log(event.target.value);
+  }
 });
+
+
+const myParentDiv = document.querySelector('.myParentDiv');
+const a = myParentDiv.firstElementChild.firstElementChild;
+a.setAttribute('href', 'https://www.google.com');
+// console.log( a.getAttribute('href'));
+
+
+const imgElement = document.getElementsByTagName('img')[0];
+console.log( imgElement.getAttribute('src'));
