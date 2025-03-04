@@ -40,10 +40,14 @@ const myButton = document.getElementById('myButton');
 
 myButton.addEventListener('click', function(){
     const myLastDiv = document.getElementById('myLastDiv');
-    myLastDiv.classList.remove('bg-red'); 
-    myLastDiv.classList.add('text-black');  
+    myLastDiv.classList.toggle('bg-red'); 
+    myLastDiv.classList.toggle('text-black');  
     myLastDiv.classList.toggle('toggle')
 });
+
+
+const bigContainer = document.getElementsByClassName('bigContainer');
+const myList = document.getElementById('myList');
 
 
 
