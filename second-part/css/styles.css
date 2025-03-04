@@ -4,3 +4,11 @@
 .text-white {
     color: white;
 }
+
+.text-black {
+    color: black;
+}
+
+.toggle {
+    font-size: 40px
+}

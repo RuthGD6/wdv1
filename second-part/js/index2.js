@@ -33,3 +33,21 @@ a.setAttribute('href', 'https://www.google.com');
 const imgElement = document.getElementsByTagName('img')[0];
 // console.log( imgElement.removeAttribute('src'));
 imgElement.setAttribute('alt', 'this is an image');
+
+
+
+const myButton = document.getElementById('myButton');
+
+myButton.addEventListener('click', function(){
+    const myLastDiv = document.getElementById('myLastDiv');
+    myLastDiv.classList.remove('bg-red'); 
+    myLastDiv.classList.add('text-black');  
+    myLastDiv.classList.toggle('toggle')
+});
+
+
+
+
+
+
+
