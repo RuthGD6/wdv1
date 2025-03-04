@@ -46,12 +46,9 @@ myButton.addEventListener('click', function(){
 });
 
 
-const bigContainer = document.getElementsByClassName('bigContainer');
-const myList = document.getElementById('myList');
+// const bigContainer = document.getElementsByClassName('bigContainer');
+const myList = document.querySelector('#myList');
 
-
-
-
-
-
-
+const myNewElement = document.createElement('li');
+myNewElement.innerText = 'Item 4';
+myList.appendChild(myNewElement);
