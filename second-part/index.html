@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Collection vs. NodeList</title>
+</head>
+<body>
+    <ul id="instruments">
+        <li>guitar</li>
+        <li>bass</li>
+        <li>drums</li>
+        <li>trumpet</li>
+    </ul>
+    <button>Add instrument</button>
+    <script>
+        const instrumentsList = document.getElementById('instruments');
+
+        //Live HTMLCollection
+        const listItemsLIVE = instrumentsList.getElementsByTagName('li');
+        
+        // Static NodeList
+        const listItems = document.querySelectorAll('li');
+
+        const button = document.querySelector('button');
+
+        button.addEventListener('click', () => {
+            console.log('clicked here')
+            const li = document.createElement('li');
+            li.textContent = 'piano';
+            instrumentsList.appendChild(li);
+            li.style.color = "green";
+            li.style.backgroundColor = "blue";
+            // console.log('Number of list items:', listItems.length); // Will not change for static NodeList
+            // console.clear();
+            console.log('STATIC list:', listItems.length); // Will not change for static NodeList
+            console.log('LIVE lists:', listItemsLIVE.length); // Will change for LIVE HTML Collection
+        });
+
+        // Log initial list items
+        console.log('Initial list items:', listItems);
+    </script>
+</body>
+</html>

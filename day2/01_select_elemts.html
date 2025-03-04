@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        /* background-color: blue; */
+      }
+
+      /* select one element that unique */
+      #with-id {
+        color: blue;
+        text-align: center;
+        text-transform: uppercase;
+        /* background-color: blue; */
+      }
+
+      /* select element with class */
+      .with-class {
+        color: rgba(61, 156, 20, 0.576);
+        /* background-color: blue; */
+      }
+
+      /* multiple selectors */
+      #with-id,
+      .another-class {
+      }
+
+      /* select element that is p tag and has class name: another-class */
+      p.another-class {
+        background-color: #c6c6c6;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- how to apply the styles to the first and the last p tags? -->
+    <p id="with-id">with id</p>
+
+    <p class="with-class">with class</p>
+    <!-- how to select this element itself -->
+    <p class="with-class another-class">with classes</p>
+
+    <p class="example">example1</p>
+    <p class="example">example2</p>
+    <p class="another-class">paragraph</p>
+    <h1 class="another-class">title</h1>
+  </body>
+</html>

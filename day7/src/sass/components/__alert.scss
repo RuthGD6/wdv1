@@ -1,0 +1,48 @@
+@use "sass:map";
+
+.container {
+  padding: 24px;
+}
+
+$alert-colors: (
+  primary: (
+    border: #c1e7ff,
+    color: #1c3e53,
+    background-color: #dff3ff
+  ),
+  success: (
+    border: #a3cfbb,
+    color: #0a3622,
+    background-color: #d1e7dd
+  ),
+  warning: (
+    border: #ffe69c,
+    color: #664d03,
+    background-color: #fff3cd
+  ),
+  danger: (
+    border: #ff9c9c,
+    color: #660303,
+    background-color: #ffcdcd
+  )
+);
+
+@mixin alert-colors($variant) {
+  background-color: map.get($alert-colors, $variant, background-color);
+  color: map.get($alert-colors, $variant, color);
+  border: 1px solid map.get($alert-colors, $variant, border);
+}
+
+$base-class: alert;
+
+.#{$base-class} {
+  padding: 16px;
+  font-size: 12px;
+  border-radius: 4px;
+
+  @each $variant, $values in $alert-colors {
+    &--#{$variant} {
+      @include alert-colors($variant);
+    }
+  }
+}

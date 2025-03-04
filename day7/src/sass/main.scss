@@ -1,0 +1,79 @@
+@use "components/avatar";
+@use "components/alert";
+@use "base/variables";
+
+.font {
+  // .font--sm
+  &--sm {
+    font-size: variables.$font-sm;
+  }
+  // .font-md
+  &--md {
+    font-size: variables.$font-md;
+  }
+  // .font-lg
+  &--lg {
+    font-size: variables.$font-lg;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header {
+  background-color: blue;
+  padding: 12px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+
+  &__right-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__logo {
+    font-size: 36px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.actions {
+  display: flex;
+  height: 50px;
+
+  // equivalent to
+  /**
+  flex-direction: column;
+  flex-wrap: wrap;
+  */
+  flex: {
+    wrap: wrap;
+    direction: column;
+  }
+}

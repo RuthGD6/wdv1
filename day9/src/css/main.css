@@ -1,0 +1,107 @@
+:root {
+  font-size: 12px;
+}
+@media (min-width: 900px) {
+  :root {
+    font-size: 22px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: red;
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+main {
+  flex: 1;
+  padding: 1rem;
+}
+
+.hero {
+  background-color: yellow;
+  height: 150px;
+  padding: 1rem;
+}
+.hero__top {
+  background-color: #4d571d;
+  height: 30%;
+}
+.hero__bottom {
+  height: 70%;
+  background-color: #ff0084;
+}
+@media (min-width: 600px) {
+  .hero {
+    display: flex;
+  }
+  .hero__top {
+    flex: 1;
+    height: 100%;
+  }
+  .hero__bottom {
+    flex: 1;
+    height: 100%;
+  }
+}
+@media (min-width: 900px) {
+  .hero__top {
+    background-color: #0efe8e;
+  }
+}
+@media (min-width: 1400px) {
+  .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.tools {
+  background-color: pink;
+}
+.tools__items {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (min-width: 900px) {
+  .tools__items {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .tools__items {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+.tools__item {
+  height: 100px;
+  border: 1px solid orange;
+  background-color: red;
+  color: white;
+}
+
+.pricing {
+  background-color: blue;
+  height: 150px;
+}
+
+/*# sourceMappingURL=main.css.map */

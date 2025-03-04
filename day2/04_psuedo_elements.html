@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input::placeholder {
+        color: rgb(212, 226, 226);
+        font-size: 12px;
+      }
+
+      li::marker {
+        color: red;
+      }
+
+      /* relative to anchor element */
+      a {
+        position: relative;
+        color: inherit;
+        text-decoration: none;
+        width: fit-content;
+      }
+
+      /* adding style to pseudo element to decorator anchor element */
+      a::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- input with placeholder -->
+    <input type="text" placeholder="enter your name..." />
+
+    <a
+      href="https://coolors.co/visualizer/880d1e-dd2d4a-f26a8d-4d6cfa"
+      target="_blank"
+      >COOLORS</a
+    >
+
+    <ul>
+      <li>snowboarding...</li>
+      <li>coding...</li>
+      <li>html...</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grand-father div{
+            background-color: blue;
+        }
+        .son + .daughter{
+            background-color: green;
+        }
+        .grand-father > div{
+            background-color: brown;
+        }
+        .son ~ div{
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grand-father">
+        grand father
+        <div class="father">
+            father
+            <div class="son">son</div>
+            <div class="daughter">daughter</div>
+            <div class="daughter">daughter 2</div>
+        </div>
+        <div class="uncle">uncle</div>
+    </div>
+</body>
+</html>
